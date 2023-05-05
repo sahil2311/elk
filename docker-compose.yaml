@@ -90,7 +90,8 @@ services:
       - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.license.self_generated.type=basic
-    mem_limit: 1073741824
+    mem_limit: 2073741824
+    restart: always
     ulimits:
       memlock:
         soft: -1
@@ -129,7 +130,8 @@ services:
       - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.license.self_generated.type=basic
-    mem_limit: 1073741824
+    mem_limit: 2073741824
+    restart: always
     ulimits:
       memlock:
         soft: -1
@@ -168,7 +170,8 @@ services:
       - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.license.self_generated.type=basic
-    mem_limit: 1073741824
+    mem_limit: 2073741824
+    restart: always
     ulimits:
       memlock:
         soft: -1
@@ -203,7 +206,8 @@ services:
       - ELASTICSEARCH_USERNAME=kibana_system
       - ELASTICSEARCH_PASSWORD=abc123
       - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
-    mem_limit: 1073741824
+    mem_limit: 2073741824
+    restart: always
     healthcheck:
       test:
         [
