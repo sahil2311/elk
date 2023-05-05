@@ -80,7 +80,7 @@ services:
       - ELASTIC_PASSWORD=abc123
       - bootstrap.memory_lock=true
       - xpack.security.enabled=true
-      - xpack.security.http.ssl.enabled=true
+      - xpack.security.http.ssl.enabled=false
       - xpack.security.http.ssl.key=certs/es01/es01.key
       - xpack.security.http.ssl.certificate=certs/es01/es01.crt
       - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
@@ -119,7 +119,7 @@ services:
       - discovery.seed_hosts=es01,es03
       - bootstrap.memory_lock=true
       - xpack.security.enabled=true
-      - xpack.security.http.ssl.enabled=true
+      - xpack.security.http.ssl.enabled=false
       - xpack.security.http.ssl.key=certs/es02/es02.key
       - xpack.security.http.ssl.certificate=certs/es02/es02.crt
       - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
@@ -158,7 +158,7 @@ services:
       - discovery.seed_hosts=es01,es02
       - bootstrap.memory_lock=true
       - xpack.security.enabled=true
-      - xpack.security.http.ssl.enabled=true
+      - xpack.security.http.ssl.enabled=false
       - xpack.security.http.ssl.key=certs/es03/es03.key
       - xpack.security.http.ssl.certificate=certs/es03/es03.crt
       - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
@@ -199,7 +199,7 @@ services:
       - 5601:5601
     environment:
       - SERVERNAME=kibana
-      - ELASTICSEARCH_HOSTS=https://es01:9200
+      - ELASTICSEARCH_HOSTS=http://es01:9200
       - ELASTICSEARCH_USERNAME=kibana_system
       - ELASTICSEARCH_PASSWORD=abc123
       - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
